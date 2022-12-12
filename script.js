@@ -8,5 +8,9 @@ let imgResultEl = document.getElementById("img-result");
 let numCodEl = document.getElementById("num-cod");
 let numSalmonEl = document.getElementById("num-salmon");
 let numTropicalEl = document.getElementById("num-tropical");
-let steveImgEl = document.getElementById("num-puffer");
-let steveImgEl = document.getElementById("steve-img");
+let numPufferEl = document.getElementById("num-puffer");
+
+// Event Listeners
+steveImgEl.addEventListener("click", selectSteve);
+
+function selectSteve() {}
