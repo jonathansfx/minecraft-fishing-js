@@ -64,8 +64,28 @@ function fishOnce() {
       imgResultEl.src = "img/Pufferfish.png";
       numPufferEl.innerHTML = numPuffer;
     }
-  } else {
-    // Use Alex Probability Distribution for Fishing
-    alert("Fish with Alex");
+  }
+  // Use Alex Probability Distribution for Fishing
+  if (character === "Alex") {
+    // Use Steve Probability Distribution for Fishing
+    let randNum = Math.random();
+
+    if (randNum < 0.1) {
+      numCod++;
+      imgResultEl.src = "img/Raw-Cod.png";
+      numCodEl.innerHTML = numCod;
+    } else if (randNum < 0.2) {
+      numSalmon++;
+      imgResultEl.src = "img/Raw-Salmon.png";
+      numSalmonEl.innerHTML = numSalmon;
+    } else if (randNum < 0.3) {
+      numTropical++;
+      imgResultEl.src = "img/Tropical-Fish.png";
+      numTropicalEl.innerHTML = numTropical;
+    } else {
+      numPuffer++;
+      imgResultEl.src = "img/Pufferfish.png";
+      numPufferEl.innerHTML = numPuffer;
+    }
   }
 }
