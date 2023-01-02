@@ -47,6 +47,7 @@ function fishOnce() {
     // Use Steve Probability Distribution for Fishing
     let randNum = Math.random();
 
+<<<<<<< Updated upstream
     if (randNum < 0.7) {
       numCod++;
       imgResultEl.src = "img/Raw-Cod.png";
@@ -87,5 +88,27 @@ function fishOnce() {
       imgResultEl.src = "img/Pufferfish.png";
       numPufferEl.innerHTML = numPuffer;
     }
+=======
+if (randNum < 0.7) {
+  numCod++;
+  imgResultEl.src = "img/Raw-Cod.png";
+  numCodEl.innerHTML = numCod;
+} else if (randNum < 0.9) {
+  numSalmon++;
+  imgResultEl.src = "img/Raw-Salmon.png";
+  numSalmonEl.innerHTML = numSalmon;
+} else if (randNum < 0.95) {
+  numTropical++;
+  imgResultEl.src = "img/Tropical-Fish.png";
+  numTropicalEl.innerHTML = numTropical;
+} else {
+  numPuffer++;
+  imgResultEl.src = "img/Pufferfish.png";
+  numPufferEl.innerHTML = numPuffer;
+}
+  } else {
+    // Use Alex Probability Distribution for Fishing
+    alert("Fish with Alex");
+>>>>>>> Stashed changes
   }
 }
