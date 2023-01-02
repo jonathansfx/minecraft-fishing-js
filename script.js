@@ -9,6 +9,8 @@ let numCodEl = document.getElementById("num-cod");
 let numSalmonEl = document.getElementById("num-salmon");
 let numTropicalEl = document.getElementById("num-tropical");
 let numPufferEl = document.getElementById("num-puffer");
+let fish5El = document.getElementById("fish5");
+let fish200CodEl = document.getElementById("fish200Cod");
 
 // Gloal Variables
 let character = "Steve";
@@ -21,6 +23,8 @@ let numPuffer = 0;
 steveImgEl.addEventListener("click", selectSteve);
 alexImgEl.addEventListener("click", selectAlex);
 fishBtnEl.addEventListener("click", fishOnce);
+fish5El.addEventListener("click", fishX5);
+fish200CodEl.addEventListener("click", fish200Cod);
 
 // Event Functions
 function selectSteve() {
@@ -112,3 +116,5 @@ if (randNum < 0.7) {
 >>>>>>> Stashed changes
   }
 }
+
+// +5 and up to 100 Button
