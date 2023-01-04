@@ -1,5 +1,4 @@
 // Minecraft Fishing Simulator
-
 // Variables to Store HTML Elements
 let steveImgEl = document.getElementById("steve-img");
 let alexImgEl = document.getElementById("alex-img");
@@ -9,8 +8,8 @@ let numCodEl = document.getElementById("num-cod");
 let numSalmonEl = document.getElementById("num-salmon");
 let numTropicalEl = document.getElementById("num-tropical");
 let numPufferEl = document.getElementById("num-puffer");
-let fish5El = document.getElementById("fish5");
-let fish200CodEl = document.getElementById("fish200Cod");
+let plus5Btn = document.getElementById("plus5");
+let until200Btn = document.getElementById("until200");
 
 // Gloal Variables
 let character = "Steve";
@@ -23,8 +22,8 @@ let numPuffer = 0;
 steveImgEl.addEventListener("click", selectSteve);
 alexImgEl.addEventListener("click", selectAlex);
 fishBtnEl.addEventListener("click", fishOnce);
-fish5El.addEventListener("click", fishFiveTimes);
-fish200CodEl.addEventListener("click", fish200Cod);
+plus5Btn.addEventListener("click", plus5);
+until200Btn.addEventListener("click", until200);
 
 // Event Functions
 function selectSteve() {
@@ -92,33 +91,20 @@ function fishOnce() {
       numPufferEl.innerHTML = numPuffer;
     }
   }
-
-
-// +5 and up to 100 Button
-function fishFiveTimes() {
-  if (character === "Steve") {
-    // Use Steve Probability Distribution for Fishing
-for (randNum = 1; randNum <= 5; randNum ++) {
-  fishOnce
-}    let randNum = Math.random();
-    if (randNum < 0.7) {
-      numCod++;
-      imgResultEl.src = "img/Raw-Cod.png";
-      numCodEl.innerHTML = numCod;
-    } else if (randNum < 0.9) {
-      numSalmon++;
-      imgResultEl.src = "img/Raw-Salmon.png";
-      numSalmonEl.innerHTML = numSalmon;
-    } else if (randNum < 0.95) {
-      numTropical++;
-      imgResultEl.src = "img/Tropical-Fish.png";
-      numTropicalEl.innerHTML = numTropical;
-    } else {
-      numPuffer++;
-      imgResultEl.src = "img/Pufferfish.png";
-      numPufferEl.innerHTML = numPuffer;
-    }
-  }
-
 }
+
+function plus5() {
+  for (let n = 1; n <=5 ; n++) {
+    fishOnce();
+  }
+}
+
+function until200() {
+  let codTarget = numCod + 200;
+  let count = 0;
+  while (numCod < codTarget) {
+fishOnce ();
+count++;
+  }
+  console.log(count);
 }
